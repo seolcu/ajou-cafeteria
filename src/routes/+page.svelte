@@ -21,6 +21,14 @@
         </div>
       </a>
     {/each}
+    <a href="/settings">
+      <div class="grid-element">
+        <picture>
+          <img src={ajouLogo} alt="사진" />
+        </picture>
+        <p>설정</p>
+      </div>
+    </a>
   </div>
 </section>
 

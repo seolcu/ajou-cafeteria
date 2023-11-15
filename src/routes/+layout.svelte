@@ -11,6 +11,10 @@
     <p>
       visit <a href="https://github.com/seolcu/ajou-cafeteria">Github repo</a>
     </p>
+    <select>
+      <option>한국어(KR)</option>
+      <option>English(US)</option>
+    </select>
   </footer>
 </div>
 
@@ -28,7 +32,8 @@
     padding: 10px;
   }
 
-  footer p {
+  footer {
     text-align: center;
+    padding: 10px;
   }
 </style>
