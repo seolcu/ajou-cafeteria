@@ -14,7 +14,9 @@
     {#each cafeteriaInfoList as cafeteriaInfo}
       <a href="/{cafeteriaInfo.name}">
         <div class="grid-element">
-          <img src={ajouLogo} alt={cafeteriaInfo.name} />
+          <picture>
+            <img src={ajouLogo} alt="사진" />
+          </picture>
           <p>{cafeteriaInfo.name}</p>
         </div>
       </a>
