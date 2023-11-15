@@ -20,6 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   main {
