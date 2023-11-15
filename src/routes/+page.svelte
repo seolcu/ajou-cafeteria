@@ -17,7 +17,16 @@
           <picture>
             <img src={ajouLogo} alt="사진" />
           </picture>
-          <p>{cafeteriaInfo.name}</p>
+          <p>
+            {cafeteriaInfo.name}:
+            {#if cafeteriaInfo.crowded == 0}
+              <span style="color: #40a02b">여유</span>
+            {:else if cafeteriaInfo.crowded == 1}
+              <span style="color: #df8e1d">보통</span>
+            {:else}
+              <span style="color: #d20f39">혼잡</span>
+            {/if}
+          </p>
         </div>
       </a>
     {/each}
