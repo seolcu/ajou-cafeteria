@@ -1,9 +1,11 @@
 const cafeteriaInfoList = [
   {
     name: "아슐랭",
+    pictureLocation: "$lib/images/아슐랭.jpg",
   },
   {
     name: "기숙사식당",
+    pictureLocation: "$lib/images/기숙사식당.png",
   },
   {
     name: "교직원식당",
