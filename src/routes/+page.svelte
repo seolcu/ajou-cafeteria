@@ -1,6 +1,7 @@
 <script>
   import ajouLogo from "$lib/images/ajou.png";
   import cafeteriaInfoList from "./cafeteriaInfoList";
+  import CrowdedIndicator from "./CrowdedIndicator.svelte";
 </script>
 
 <svelte:head>
@@ -19,13 +20,7 @@
           </picture>
           <p>
             {cafeteriaInfo.name}:
-            {#if cafeteriaInfo.crowded == 0}
-              <span style="color: #40a02b">여유</span>
-            {:else if cafeteriaInfo.crowded == 1}
-              <span style="color: #df8e1d">보통</span>
-            {:else}
-              <span style="color: #d20f39">혼잡</span>
-            {/if}
+            <CrowdedIndicator crowded={cafeteriaInfo.crowded} />
           </p>
         </div>
       </a>
