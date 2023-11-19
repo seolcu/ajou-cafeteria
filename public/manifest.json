@@ -20,5 +20,6 @@
   "dir": "auto",
   "lang": "ko-KR",
   "name": "아주대학교 학생식당",
-  "short_name": "아주대학교 학생식당"
+  "short_name": "아주대학교 학생식당",
+  "start_url": "/"
 }
