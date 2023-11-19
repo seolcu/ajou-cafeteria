@@ -44,6 +44,13 @@ export default function Home() {
             </a>
           );
         })}
+        <a
+          href="/settings"
+          className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
+        >
+          <Image src={ajouLogo} width={75} height={75} alt="사진" />
+          <h2 className="font-medium">설정</h2>
+        </a>
       </div>
     </main>
   );
