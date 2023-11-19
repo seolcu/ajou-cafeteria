@@ -14,7 +14,14 @@ export default function Home() {
               className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
               key={cafeteriaInfo.id}
             >
-              <Image src={ajouLogo} width={75} height={75} alt="사진" />
+              <div className="relative w-20 h-20">
+                <Image
+                  className="object-cover rounded-full border-2 border-text dark:border-text-dark"
+                  src={"/" + cafeteriaInfo.picture}
+                  fill
+                  alt="사진"
+                />
+              </div>
               <h2 className="font-medium">
                 {cafeteriaInfo.name}:{" "}
                 <span
@@ -48,7 +55,14 @@ export default function Home() {
           href="/settings"
           className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
         >
-          <Image src={ajouLogo} width={75} height={75} alt="사진" />
+          <div className="relative w-20 h-20">
+            <Image
+              className="object-cover rounded-full border-2 border-text dark:border-text-dark"
+              src={ajouLogo}
+              fill
+              alt="사진"
+            />
+          </div>
           <h2 className="font-medium">설정</h2>
         </a>
       </div>
