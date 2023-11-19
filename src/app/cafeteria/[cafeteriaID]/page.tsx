@@ -20,14 +20,14 @@ export default function Cafeteria({
     return (
       <main className="p-4 flex flex-col gap-4">
         <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
-        {/* <img className="rounded" src={"/" + cafeteriaInfo.picture} alt="사진" /> */}
-        <Image
-          className="rounded"
-          src={"/" + cafeteriaInfo.picture}
-          width={500}
-          height={500}
-          alt="사진"
-        />
+        <div className="relative min-w-full h-56">
+          <Image
+            className="object-cover rounded"
+            src={"/" + cafeteriaInfo.picture}
+            fill
+            alt="사진"
+          />
+        </div>
         <div className="grid grid-cols-2 gap-4">
           <div
             className={
