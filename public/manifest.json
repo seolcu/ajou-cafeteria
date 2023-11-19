@@ -1,0 +1,24 @@
+{
+  "theme_color": "#0066b3",
+  "background_color": "#0066b3",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "ko-KR",
+  "name": "아주대학교 학생식당",
+  "short_name": "아주대학교 학생식당"
+}
