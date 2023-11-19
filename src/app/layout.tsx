@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html className="bg-crust dark:bg-crust-dark text-text dark:text-text-dark">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body
         className={
           notoSansKR.className +
