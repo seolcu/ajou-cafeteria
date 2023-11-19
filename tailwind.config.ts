@@ -15,7 +15,7 @@ const config: Config = {
       },
     },
     colors: {
-      "ajou-blue": "#0072CE",
+      "ajou-blue": "#0066B3",
       // based on catppuccin: light = Latte, dark = Frappe
       text: "#4c4f69",
       "text-dark": "#c6d0f5",
