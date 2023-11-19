@@ -29,6 +29,8 @@ const config: Config = {
       "yellow-dark": "#e5c890",
       green: "#40a02b",
       "green-dark": "#a6d189",
+      gray: "#6c6f85",
+      "gray-dark": "#a5adce",
     },
   },
   plugins: [],
