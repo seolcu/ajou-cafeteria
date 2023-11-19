@@ -1,16 +1,16 @@
 import Image from "next/image";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
-import ajouLogo from "../assets/ajou.png";
+import ajouLogo from "public/ajou.png";
 
 export default function Home() {
   return (
-    <main className="bg-mantle dark:bg-mantle-dark h-screen max-w-md mx-auto flex flex-col gap-4 p-4">
+    <main className="flex flex-col gap-4 p-4">
       <h1 className="text-xl font-bold">학생식당</h1>
       <div className="grid grid-cols-2 gap-4">
         {cafeteriaInfoList.map((cafeteriaInfo) => {
           return (
             <a
-              href={"/cafeteria/" + cafeteriaInfo.name}
+              href={"/cafeteria/" + cafeteriaInfo.id}
               className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
               key={cafeteriaInfo.id}
             >

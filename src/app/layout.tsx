@@ -15,8 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={notoSansKR.className}>{children}</body>
+    <html className="bg-crust dark:bg-crust-dark text-text dark:text-text-dark">
+      <body
+        className={
+          notoSansKR.className +
+          " bg-mantle dark:bg-mantle-dark h-screen max-w-md mx-auto"
+        }
+      >
+        {children}
+      </body>
     </html>
   );
 }

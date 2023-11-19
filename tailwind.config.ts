@@ -17,10 +17,14 @@ const config: Config = {
     colors: {
       "ajou-blue": "#0072CE",
       // based on catppuccin: light = Latte, dark = Frappe
+      text: "#4c4f69",
+      "text-dark": "#c6d0f5",
       base: "#eff1f5",
-      mantle: "#e6e9ef",
       "base-dark": "#303446",
+      mantle: "#e6e9ef",
       "mantle-dark": "#292c3c",
+      crust: "#dce0e8",
+      "crust-dark": "#232634",
       blue: "#1e66f5",
       "blue-dark": "#8caaee",
       red: "#d20f39",
@@ -30,7 +34,6 @@ const config: Config = {
       green: "#40a02b",
       "green-dark": "#a6d189",
       gray: "#6c6f85",
-      "gray-dark": "#a5adce",
     },
   },
   plugins: [],
