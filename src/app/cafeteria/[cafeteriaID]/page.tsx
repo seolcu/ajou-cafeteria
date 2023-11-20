@@ -1,5 +1,6 @@
 import cafeteriaInfoList from "@/functions/cafeteriaInfoList";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Cafeteria({
   params,
@@ -19,7 +20,10 @@ export default function Cafeteria({
   } else {
     return (
       <main className="p-4 flex flex-col gap-4">
-        <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
+        <div className="flex flex-row gap-4 items-center">
+          <Link href="/">←</Link>
+          <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
+        </div>
         <div className="relative min-w-full h-56">
           <Image
             className="object-cover rounded"

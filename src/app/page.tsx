@@ -1,6 +1,7 @@
 import Image from "next/image";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ajouLogo from "public/ajou.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <div className="grid grid-cols-2 gap-4">
         {cafeteriaInfoList.map((cafeteriaInfo) => {
           return (
-            <a
+            <Link
               href={"/cafeteria/" + cafeteriaInfo.id}
               className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
               key={cafeteriaInfo.id}
@@ -48,10 +49,10 @@ export default function Home() {
                     : "정보 없음"}
                 </span>
               </h2>
-            </a>
+            </Link>
           );
         })}
-        <a
+        <Link
           href="/settings"
           className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
         >
@@ -64,7 +65,7 @@ export default function Home() {
             />
           </div>
           <h2 className="font-medium">설정</h2>
-        </a>
+        </Link>
       </div>
     </main>
   );
