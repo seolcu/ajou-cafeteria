@@ -59,12 +59,12 @@ export default function Cafeteria({
                 : "정보 없음"}
             </h2>
           </div>
-          <a
+          <Link
             href={"/cafeteria/" + cafeteriaInfo.id + "/menu"}
             className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
           >
             <h2 className="font-medium">메뉴</h2>
-          </a>
+          </Link>
         </div>
       </main>
     );
