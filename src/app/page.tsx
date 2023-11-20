@@ -15,6 +15,14 @@ export default function Home() {
               className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
               key={cafeteriaInfo.id}
             >
+              <div className="flex flex-row w-full gap-1 text-sm items-center justify-end">
+                <button className="text-center w-6 h-6 border-2 rounded-full text-red dark:text-red-dark border-red dark:border-red-dark">
+                  ♥
+                </button>
+                <button className="text-center w-6 h-6 border-2 rounded-full text-yellow dark:text-yellow-dark border-yellow dark:border-yellow-dark">
+                  🔔
+                </button>
+              </div>
               <div className="relative w-20 h-20">
                 <Image
                   className="object-cover rounded-full border-2 border-text dark:border-text-dark"
@@ -56,6 +64,8 @@ export default function Home() {
           href="/settings"
           className="bg-base dark:bg-base-dark flex flex-col gap-4 justify-between items-center p-4 rounded"
         >
+          {/* place holder */}
+          <div className="h-6"></div>
           <div className="relative w-20 h-20">
             <Image
               className="object-cover rounded-full border-2 border-text dark:border-text-dark"
