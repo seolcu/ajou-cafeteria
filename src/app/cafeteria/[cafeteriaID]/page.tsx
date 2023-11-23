@@ -29,6 +29,7 @@ export default function Cafeteria({
             className="object-cover rounded"
             src={"/" + cafeteriaInfo.picture}
             fill
+            sizes="100%"
             alt="사진"
           />
         </div>

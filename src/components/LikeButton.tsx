@@ -1,10 +1,10 @@
 import { HeartIcon } from "@heroicons/react/20/solid";
 import LikeOrBellButton from "./LikeOrBellButton";
 
-export default function LikeButton(cafeteriaID: number) {
+export default function LikeButton({ cafeteriaID }: { cafeteriaID: number }) {
   return (
     <LikeOrBellButton
-      key="liked"
+      storageKey="liked"
       cafeteriaID={cafeteriaID}
       enabledIcon={<HeartIcon />}
       disabledIcon={<HeartIcon />}

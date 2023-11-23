@@ -4,15 +4,10 @@ import Image from "next/image";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ajouLogo from "public/ajou.png";
 import Link from "next/link";
-import useLocalStorage from "@/functions/useLocalStorage";
-import { useState } from "react";
-import { BellAlertIcon, BellIcon, HeartIcon } from "@heroicons/react/20/solid";
-import LikeOrBellButton from "@/components/LikeOrBellButton";
+import LikeButton from "@/components/LikeButton";
+import BellButton from "@/components/BellButton";
 
 export default function Home() {
-  const [likedList, setLikedList] = useState<number[]>([]);
-  const [notifiedList, setNotifiedList] = useState<number[]>([]);
-
   return (
     <main className="flex flex-col gap-4 p-4">
       <h1 className="text-xl font-bold">학생식당</h1>
@@ -24,14 +19,8 @@ export default function Home() {
               key={cafeteriaInfo.id}
             >
               <div className="flex flex-row w-full gap-1 text-sm items-center justify-end">
-                <LikeOrBellButton
-                  key="liked"
-                  cafeteriaID={cafeteriaInfo.id}
-                  enabledIcon={<HeartIcon />}
-                  disabledIcon={<HeartIcon />}
-                  enabledStyle="text-red dark:text-red-dark border-red dark:border-red-dark"
-                  disabledStyle="text-gray border-gray"
-                />
+                <LikeButton cafeteriaID={cafeteriaInfo.id} />
+                <BellButton cafeteriaID={cafeteriaInfo.id} />
               </div>
               <Link
                 href={"/cafeteria/" + cafeteriaInfo.id}
@@ -42,6 +31,7 @@ export default function Home() {
                     className="object-cover rounded-full border-2 border-text dark:border-text-dark"
                     src={"/" + cafeteriaInfo.picture}
                     fill
+                    sizes="100%"
                     alt="사진"
                   />
                 </div>
@@ -86,6 +76,7 @@ export default function Home() {
               className="object-cover rounded-full border-2 border-text dark:border-text-dark"
               src={ajouLogo}
               fill
+              sizes="100%"
               alt="사진"
             />
           </div>
