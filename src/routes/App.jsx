@@ -1,10 +1,10 @@
-import BellButton from "./components/BellButton";
-import LikeButton from "./components/LikeButton";
-import cafeteriaInfoList from "./functions/cafeteriaInfoList";
-import ajouLogo from "./assets/ajou.png";
+import BellButton from "../components/BellButton";
+import LikeButton from "../components/LikeButton";
+import cafeteriaInfoList from "../functions/cafeteriaInfoList";
+import ajouLogo from "../assets/ajou.png";
 
 function getImageUrl(name) {
-  return new URL(`./assets/${name}`, import.meta.url).href;
+  return new URL(`../assets/${name}`, import.meta.url).href;
 }
 
 function App() {
@@ -22,10 +22,7 @@ function App() {
                 <LikeButton cafeteriaID={cafeteriaInfo.id} />
                 <BellButton cafeteriaID={cafeteriaInfo.id} />
               </div>
-              <a
-                href={"/cafeteria/" + cafeteriaInfo.id}
-                className="w-full flex flex-col gap-4 justify-between items-center"
-              >
+              <a className="w-full flex flex-col gap-4 justify-between items-center">
                 <img
                   className="h-20 w-20 rounded-full border-2 border-text"
                   src={getImageUrl(cafeteriaInfo.pictureName)}
