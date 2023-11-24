@@ -1,6 +1,11 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import BellButton from "./components/BellButton";
+import LikeButton from "./components/LikeButton";
 import cafeteriaInfoList from "./functions/cafeteriaInfoList";
+import ajouLogo from "./assets/ajou.png";
+
+function getImageUrl(name) {
+  return new URL(`./assets/${name}`, import.meta.url).href;
+}
 
 function App() {
   return (
@@ -13,23 +18,19 @@ function App() {
               className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
               key={cafeteriaInfo.id}
             >
-              <div className="flex flex-row w-full gap-1 text-sm items-center justify-end">
+              <div className="w-full flex flex-row gap-1 justify-end items-center">
                 <LikeButton cafeteriaID={cafeteriaInfo.id} />
                 <BellButton cafeteriaID={cafeteriaInfo.id} />
               </div>
-              <Link
+              <a
                 href={"/cafeteria/" + cafeteriaInfo.id}
-                className="flex flex-col gap-4 justify-between items-center"
+                className="w-full flex flex-col gap-4 justify-between items-center"
               >
-                <div className="relative w-20 h-20">
-                  <Image
-                    className="object-cover rounded-full border-2 border-text"
-                    src={"/" + cafeteriaInfo.picture}
-                    fill
-                    sizes="100%"
-                    alt="사진"
-                  />
-                </div>
+                <img
+                  className="h-20 w-20 rounded-full border-2 border-text"
+                  src={getImageUrl(cafeteriaInfo.pictureName)}
+                  alt="사진"
+                />
                 <h2 className="font-medium">
                   {cafeteriaInfo.name}:{" "}
                   <span
@@ -56,27 +57,23 @@ function App() {
                       : "정보 없음"}
                   </span>
                 </h2>
-              </Link>
+              </a>
             </div>
           );
         })}
-        <Link
+        <a
           href="/settings"
           className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
         >
           {/* place holder */}
           <div className="h-6"></div>
-          <div className="relative w-20 h-20">
-            <Image
-              className="object-cover rounded-full border-2 border-text"
-              src={ajouLogo}
-              fill
-              sizes="100%"
-              alt="사진"
-            />
-          </div>
+          <img
+            className="h-20 w-20 rounded-full border-2 border-text"
+            src={ajouLogo}
+            alt="사진"
+          />
           <h2 className="font-medium">설정</h2>
-        </Link>
+        </a>
       </div>
     </main>
   );

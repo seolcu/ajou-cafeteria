@@ -1,7 +1,7 @@
 import { BellAlertIcon, BellIcon } from "@heroicons/react/20/solid";
-import LikeOrBellButton from "./LikeOrBellButton";
+import LikeOrBellButton from "./LikeOrBellButon";
 
-export default function BellButton({ cafeteriaID }) {
+function BellButton({ cafeteriaID }) {
   return (
     <LikeOrBellButton
       storageKey="notified"
@@ -13,3 +13,5 @@ export default function BellButton({ cafeteriaID }) {
     />
   );
 }
+
+export default BellButton;

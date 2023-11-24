@@ -1,4 +1,4 @@
-import useLocalStorage from "@/functions/useLocalStorage";
+import useLocalStorage from "../functions/useLocalStorage";
 
 function LikeOrBellButton({
   storageKey,
@@ -6,7 +6,7 @@ function LikeOrBellButton({
   enabledIcon,
   disabledIcon,
   enabledStyle,
-  disabledStyle = "text-overlay0 border-overlay0",
+  disabledStyle,
 }) {
   const checkboxStyle = "text-center font-bold w-6 h-6 border-2 rounded-full ";
 
