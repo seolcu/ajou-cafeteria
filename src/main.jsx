@@ -4,14 +4,18 @@ import App from "./routes/App.jsx";
 import "./index.css";
 import RootLayout from "./components/RootLayout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./routes/ErrorPage.jsx";
+import Cafeteria from "./routes/Cafeteria.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/cafeteria/:id",
+    path: "/cafeteria/:cafeteriaID",
+    element: <Cafeteria />,
   },
 ]);
 

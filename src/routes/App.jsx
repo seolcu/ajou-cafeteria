@@ -2,6 +2,7 @@ import BellButton from "../components/BellButton";
 import LikeButton from "../components/LikeButton";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ajouLogo from "../assets/ajou.png";
+import { Link } from "react-router-dom";
 
 function getImageUrl(name) {
   return new URL(`../assets/${name}`, import.meta.url).href;
@@ -22,7 +23,10 @@ function App() {
                 <LikeButton cafeteriaID={cafeteriaInfo.id} />
                 <BellButton cafeteriaID={cafeteriaInfo.id} />
               </div>
-              <a className="w-full flex flex-col gap-4 justify-between items-center">
+              <Link
+                to={`/cafeteria/${cafeteriaInfo.id}`}
+                className="w-full flex flex-col gap-4 justify-between items-center"
+              >
                 <img
                   className="h-20 w-20 rounded-full border-2 border-text"
                   src={getImageUrl(cafeteriaInfo.pictureName)}
@@ -54,12 +58,12 @@ function App() {
                       : "정보 없음"}
                   </span>
                 </h2>
-              </a>
+              </Link>
             </div>
           );
         })}
-        <a
-          href="/settings"
+        <Link
+          to="/settings"
           className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
         >
           {/* place holder */}
@@ -70,7 +74,7 @@ function App() {
             alt="사진"
           />
           <h2 className="font-medium">설정</h2>
-        </a>
+        </Link>
       </div>
     </main>
   );
