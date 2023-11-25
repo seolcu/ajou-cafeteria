@@ -6,6 +6,7 @@ import RootLayout from "./components/RootLayout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import Cafeteria from "./routes/Cafeteria.jsx";
+import Settings from "./routes/settings.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/cafeteria/:cafeteriaID",
     element: <Cafeteria />,
+  },
+  {
+    path: "/settings",
+    element: <Settings />,
   },
 ]);
 

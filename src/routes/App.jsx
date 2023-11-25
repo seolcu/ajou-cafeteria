@@ -3,10 +3,7 @@ import LikeButton from "../components/LikeButton";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ajouLogo from "../assets/ajou.png";
 import { Link } from "react-router-dom";
-
-function getImageUrl(name) {
-  return new URL(`../assets/${name}`, import.meta.url).href;
-}
+import getImageUrl from "../functions/getImageUrl";
 
 export default function App() {
   return (
