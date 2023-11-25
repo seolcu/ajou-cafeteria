@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import getImageUrl from "../functions/getImageUrl";
 import LikeButton from "../components/LikeButton";
 import BellButton from "../components/BellButton";
+import { HomeIcon } from "@heroicons/react/20/solid";
 
 export default function App() {
   return (
     <main className="flex flex-col gap-4 p-4">
-      <header>
+      <header className="flex flex-row gap-4 items-center">
+        <HomeIcon className="w-4 h-4" />
         <h1 className="text-xl font-bold">학생식당</h1>
       </header>
       <div className="grid grid-cols-2 gap-4">

@@ -5,7 +5,7 @@ const cafeteriaInfoList = [
     pictureName: "아슐랭.jpg",
     crowded: 3,
     type: "collection",
-    cafeterias: [
+    shops: [
       {
         id: 0,
         name: "감탄떡볶이",
@@ -75,11 +75,37 @@ const cafeteriaInfoList = [
     crowded: 3,
     type: "random",
     price: 5500,
-    menuofToday: {
-      id: 0,
-      nameList: ["김치찌개", "밥", "김치"],
-      ingredients: ["김치", "두부", "고추장", "물", "돼지고기"],
-    },
+    menuofToday: [
+      {
+        id: 0,
+        position: "breakfast",
+        menu: ["매콤고추참치컵밥", "유부장국", "단무지", "배추김치"],
+        ingredients: [
+          "참치캔-가다랑어:베트남산",
+          "밥/죽-쌀:국산",
+          "배추김치:중국산",
+        ],
+      },
+      {
+        id: 1,
+        position: "lunch",
+        menu: ["가츠동", "우동국", "마카로니콘샐러드", "락교", "배추김치"],
+        ingredients: ["돈가스-돈육:국산", "밥/죽-쌀:국산", "배추김치:중국산"],
+      },
+      {
+        id: 2,
+        position: "dinner",
+        menu: [
+          "고들빼기제육볶음",
+          "근대된장국",
+          "동부육무침",
+          "오이장아찌",
+          "흑미밥",
+          "배추김치",
+        ],
+        ingredients: ["돈육:국산", "밥/죽-쌀:국산", "배추김치:중국산"],
+      },
+    ],
   },
   {
     id: 2,
@@ -88,11 +114,27 @@ const cafeteriaInfoList = [
     crowded: 2,
     type: "random",
     price: 6000,
-    menuofToday: {
-      id: 0,
-      nameList: ["돈까스", "밥", "김치"],
-      ingredients: ["김치", "물", "돼지고기"],
-    },
+    menuofToday: [
+      {
+        id: 0,
+        position: "lunch",
+        menu: ["가츠동", "우동국", "마카로니콘샐러드", "락교", "배추김치"],
+        ingredients: ["돈가스-돈육:국산", "밥/죽-쌀:국산", "배추김치:중국산"],
+      },
+      {
+        id: 1,
+        position: "dinner",
+        menu: [
+          "고들빼기제육볶음",
+          "근대된장국",
+          "동부육무침",
+          "오이장아찌",
+          "흑미밥",
+          "배추김치",
+        ],
+        ingredients: ["돈육:국산", "밥/죽-쌀:국산", "배추김치:중국산"],
+      },
+    ],
   },
   {
     id: 3,
