@@ -139,7 +139,7 @@ const cafeteriaInfoList = [
   {
     id: 3,
     name: "다산관매점",
-    pictureName: "다산관매점.jpg",
+    pictureName: "ajou.png",
     crowded: 1,
     type: "restaurant",
     menu: [
@@ -160,7 +160,7 @@ const cafeteriaInfoList = [
   {
     id: 4,
     name: "팔달관매점",
-    pictureName: "ajou.png",
+    pictureName: "팔달관매점.jpg",
     crowded: 2,
     type: "restaurant",
     menu: [
