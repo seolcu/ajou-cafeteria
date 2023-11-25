@@ -4,6 +4,7 @@ import ErrorPage from "./ErrorPage";
 import getImageUrl from "../functions/getImageUrl";
 import LikeButton from "../components/LikeButton";
 import BellButton from "../components/BellButton";
+import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 
 export default function Cafeteria() {
   const params = useParams();
@@ -17,7 +18,9 @@ export default function Cafeteria() {
     return (
       <main className="p-4 flex flex-col gap-4">
         <header className="flex flex-row gap-4 items-center">
-          <Link to="/">←</Link>
+          <Link to="/" className="w-4 h-4">
+            <ArrowUturnLeftIcon />
+          </Link>
           <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
           <div className="grow" />
           <div className="flex flex-row gap-1">

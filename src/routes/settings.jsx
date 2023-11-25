@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SimpleCheckBox from "../components/SimpleCheckbox";
 import SimpleButton from "../components/SimpleButton";
 import useLocalStorage from "../functions/useLocalStorage";
+import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 
 export default function Settings() {
   const [language, setLanguage] = useLocalStorage("language", "ko");
@@ -9,7 +10,9 @@ export default function Settings() {
   return (
     <main className="p-4 flex flex-col gap-4">
       <header className="flex flex-row gap-4 items-center">
-        <Link to="/">←</Link>
+        <Link to="/" className="w-4 h-4">
+          <ArrowUturnLeftIcon />
+        </Link>
         <h1 className="text-xl font-bold">설정</h1>
       </header>
 
