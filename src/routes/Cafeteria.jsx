@@ -26,6 +26,21 @@ export default function Cafeteria() {
   const hours = intToTimeString(date.getHours());
   const minutes = intToTimeString(date.getMinutes() - (date.getMinutes() % 10));
 
+  if (cafeteriaInfo.type == "collection") {
+    const averagePriceList = [];
+    cafeteriaInfo.shops.forEach((shop) => {
+      averagePriceList.push(
+        shop.menu.reduce((a, b) => a + b, 0) / shop.menu.length
+      );
+    });
+    const averagePrice =
+      averagePriceList.reduce((a, b) => a + b, 0) / averagePriceList.length;
+  } else if (cafeteriaInfo.type == "random") {
+    const averagePrice = cafeteriaInfo.price;
+  } else if (cafeteriaInfo.type == "restaurant") {
+    const averagePrice = cafeteriaInfo.price;
+  }
+
   if (!cafeteriaInfo) {
     return <ErrorPage />;
   } else {
@@ -78,9 +93,7 @@ export default function Cafeteria() {
             <p className="text-xs">마지막 갱신 {hours + ":" + minutes}</p>
           </div>
 
-          <div className="bg-base text-center p-4 rounded font-medium">
-            뭐 넣을지 고민중
-          </div>
+          <div className="bg-base text-center p-4 rounded font-medium"></div>
         </div>
 
         <hr className="border-2 rounded border-text" />
