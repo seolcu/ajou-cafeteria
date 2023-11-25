@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import getImageUrl from "../functions/getImageUrl";
 import LikeButton from "../components/LikeButton";
 import BellButton from "../components/BellButton";
-import { HomeIcon } from "@heroicons/react/20/solid";
+import { Cog6ToothIcon, HomeIcon } from "@heroicons/react/20/solid";
 
 export default function App() {
   return (
@@ -69,11 +69,7 @@ export default function App() {
         >
           {/* place holder */}
           <div className="h-6"></div>
-          <img
-            className="h-20 w-20 rounded-full border-2 border-text"
-            src={ajouLogo}
-            alt="사진"
-          />
+          <Cog6ToothIcon className="h-20 w-20 border-2 rounded-full p-2 text-text border-text" />
           <h2 className="font-medium">설정</h2>
         </Link>
       </div>
