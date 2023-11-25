@@ -12,8 +12,16 @@ export default function Cafeteria() {
     (singleCafeteriaInfo) => singleCafeteriaInfo.id == params.cafeteriaID
   );
 
-  const crowdedIndicatorStyle =
-    "text-center p-4 rounded font-medium text-base ";
+  const date = new Date();
+  const intToTimeString = (time) => {
+    if (time < 10) {
+      return "0" + time;
+    } else {
+      return time;
+    }
+  };
+  const hours = intToTimeString(date.getHours());
+  const minutes = intToTimeString(date.getMinutes() - (date.getMinutes() % 10));
 
   if (!cafeteriaInfo) {
     return <ErrorPage />;
@@ -39,17 +47,33 @@ export default function Cafeteria() {
         />
 
         <div className="grid grid-cols-2 gap-4">
-          {cafeteriaInfo.crowded == 0 ? (
-            <div className={crowdedIndicatorStyle + "bg-overlay0"}>휴무</div>
-          ) : cafeteriaInfo.crowded == 1 ? (
-            <div className={crowdedIndicatorStyle + "bg-green"}>여유</div>
-          ) : cafeteriaInfo.crowded == 2 ? (
-            <div className={crowdedIndicatorStyle + "bg-yellow"}>보통</div>
-          ) : cafeteriaInfo.crowded == 3 ? (
-            <div className={crowdedIndicatorStyle + "bg-red"}>혼잡</div>
-          ) : (
-            <div className={crowdedIndicatorStyle + "bg-blue"}>정보 없음</div>
-          )}
+          <div
+            className={
+              "text-center p-4 rounded font-medium text-base " +
+              (cafeteriaInfo.crowded == 0
+                ? "bg-overlay0"
+                : cafeteriaInfo.crowded == 1
+                ? "bg-green"
+                : cafeteriaInfo.crowded == 2
+                ? "bg-yellow"
+                : cafeteriaInfo.crowded == 3
+                ? "bg-red"
+                : "bg-blue")
+            }
+          >
+            <h2>
+              {cafeteriaInfo.crowded == 0
+                ? "휴무"
+                : cafeteriaInfo.crowded == 1
+                ? "여유 "
+                : cafeteriaInfo.crowded == 2
+                ? "보통"
+                : cafeteriaInfo.crowded == 3
+                ? "혼잡"
+                : "정보 없음"}
+            </h2>
+            <p className="text-xs">마지막 갱신 {hours + ":" + minutes}</p>
+          </div>
 
           <div className="bg-base text-center p-4 rounded font-medium">
             뭐 넣을지 고민중
