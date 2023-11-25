@@ -1,6 +1,6 @@
 import useLocalStorage from "../functions/useLocalStorage";
 
-export default function LikeOrBellButton({
+export default function PersistentRoundButton({
   storageKey,
   cafeteriaID,
   enabledIcon,
@@ -8,7 +8,8 @@ export default function LikeOrBellButton({
   enabledStyle,
   disabledStyle,
 }) {
-  const checkboxStyle = "text-center font-bold w-6 h-6 border-2 rounded-full ";
+  const checkboxStyle =
+    "text-center font-bold p-0.5 w-6 h-6 border-2 rounded-full ";
 
   const [state, setState] = useLocalStorage(storageKey, []);
 

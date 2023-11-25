@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 export default function Settings() {
   return (
     <main className="p-4 flex flex-col gap-4">
-      <div className="flex flex-row gap-4 items-center">
+      <header className="flex flex-row gap-4 items-center">
         <Link to="/">←</Link>
         <h1 className="text-xl font-bold">설정</h1>
-      </div>
+      </header>
+
       <div className="flex flex-col gap-4">
         <div className="flex flex-row gap-4 items-center">
           <h2 className="text-lg font-bold">테마</h2>

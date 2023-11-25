@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ErrorPage from "./ErrorPage";
 import getImageUrl from "../functions/getImageUrl";
+import LikeAndBellButtons from "../components/LikeAndBellButtons";
 
 export default function Cafeteria() {
   const params = useParams();
@@ -14,10 +15,13 @@ export default function Cafeteria() {
   } else {
     return (
       <main className="p-4 flex flex-col gap-4">
-        <div className="flex flex-row gap-4 items-center">
+        <header className="flex flex-row gap-4 items-center">
           <Link to="/">←</Link>
           <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
-        </div>
+          <div className="grow" />
+          <LikeAndBellButtons cafeteriaID={cafeteriaInfo.id} />
+        </header>
+
         <img
           className="h-60 rounded object-cover border-2 border-text"
           src={getImageUrl(cafeteriaInfo.pictureName)}
