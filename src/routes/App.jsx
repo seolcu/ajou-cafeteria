@@ -29,7 +29,7 @@ export default function App() {
                 className="w-full flex flex-col gap-4 justify-between items-center"
               >
                 <img
-                  className="h-20 w-20 rounded-full border-2 border-text"
+                  className="h-20 w-20 rounded-full border-2 border-text object-cover"
                   src={getImageUrl(cafeteriaInfo.pictureName)}
                   alt="사진"
                 />
