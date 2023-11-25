@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import SimpleCheckBox from "../components/SimpleCheckbox";
+import SimpleButton from "../components/SimpleButton";
+import useLocalStorage from "../functions/useLocalStorage";
 
 export default function Settings() {
+  const [language, setLanguage] = useLocalStorage("language", "ko");
+
   return (
     <main className="p-4 flex flex-col gap-4">
       <header className="flex flex-row gap-4 items-center">
@@ -8,40 +13,29 @@ export default function Settings() {
         <h1 className="text-xl font-bold">설정</h1>
       </header>
 
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-row gap-4 items-center">
-          <h2 className="text-lg font-bold">테마</h2>
-          <div className="flex flex-row gap-4 items-center">
-            <button
-              className="w-4 h-4 rounded-full bg-base border-2 border-text"
-              onClick={() => {
-                document.documentElement.classList.remove("dark");
-              }}
-            ></button>
-            <button
-              className="w-4 h-4 rounded-full bg-base border-2 border-text"
-              onClick={() => {
-                document.documentElement.classList.add("dark");
-              }}
-            ></button>
-          </div>
+      <div className="bg-base p-4 flex flex-col gap-4 rounded">
+        <h2 className="text-lg font-bold">알림</h2>
+        <div className="flex flex-row gap-2 items-center">
+          <SimpleCheckBox storageKey="notification" defaultState={true} />
+          <p>관심 식당 혼잡도 증가 시 알림</p>
         </div>
-        <div className="flex flex-row gap-4 items-center">
-          <h2 className="text-lg font-bold">언어</h2>
-          <div className="flex flex-row gap-4 items-center">
-            <button
-              className="w-4 h-4 rounded-full bg-base border-2 border-text"
-              onClick={() => {
-                document.documentElement.lang = "ko";
-              }}
-            ></button>
-            <button
-              className="w-4 h-4 rounded-full bg-base border-2 border-text"
-              onClick={() => {
-                document.documentElement.lang = "en";
-              }}
-            ></button>
-          </div>
+      </div>
+
+      <div className="bg-base p-4 flex flex-col gap-4 rounded">
+        <h2 className="text-lg font-bold">언어</h2>
+        <div className="flex flex-row gap-4">
+          <SimpleButton
+            enableCondition={language == "ko"}
+            onClick={() => setLanguage("ko")}
+          >
+            한국어
+          </SimpleButton>
+          <SimpleButton
+            enableCondition={language == "en"}
+            onClick={() => setLanguage("en")}
+          >
+            English
+          </SimpleButton>
         </div>
       </div>
     </main>
