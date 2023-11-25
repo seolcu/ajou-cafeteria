@@ -56,9 +56,25 @@ export default function Cafeteria() {
           </div>
         </div>
 
-        <div className="bg-base p-4 rounded flex flex-col gap-4">
-          <h2 className="text-lg font-medium">메뉴</h2>
-        </div>
+        <hr className="border-2 rounded border-text" />
+
+        {cafeteriaInfo.type == "collection" ? (
+          <>
+            <h2 className="font-bold text-lg">식당 목록</h2>
+          </>
+        ) : cafeteriaInfo.type == "random" ? (
+          <>
+            <h2 className="font-bold text-lg">오늘의 메뉴</h2>
+          </>
+        ) : cafeteriaInfo.type == "restaurant" ? (
+          <>
+            <h2 className="font-bold text-lg">메뉴 목록</h2>
+          </>
+        ) : (
+          <>
+            <h2 className="font-bold text-lg">error</h2>
+          </>
+        )}
       </main>
     );
   }
