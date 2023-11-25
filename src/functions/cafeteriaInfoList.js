@@ -1,4 +1,4 @@
-const cafeteriaInfoList = [
+export default cafeteriaInfoList = [
   {
     id: 0,
     name: "아슐랭",
@@ -42,5 +42,3 @@ const cafeteriaInfoList = [
     crowded: 1,
   },
 ];
-
-export default cafeteriaInfoList;

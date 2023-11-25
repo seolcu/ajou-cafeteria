@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ErrorPage from "./ErrorPage";
 
-function Cafeteria({ params }) {
+export default function Cafeteria() {
   const cafeteriaInfo = cafeteriaInfoList.find(
     (singleCafeteriaInfo) => singleCafeteriaInfo.id == params.cafeteriaID
   );
@@ -12,7 +13,7 @@ function Cafeteria({ params }) {
     return (
       <main className="p-4 flex flex-col gap-4">
         <div className="flex flex-row gap-4 items-center">
-          <Link href="/">←</Link>
+          <Link to="/">←</Link>
           <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
         </div>
         <img
@@ -58,5 +59,3 @@ function Cafeteria({ params }) {
     );
   }
 }
-
-export default Cafeteria;

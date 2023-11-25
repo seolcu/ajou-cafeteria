@@ -1,6 +1,6 @@
 import useLocalStorage from "../functions/useLocalStorage";
 
-function LikeOrBellButton({
+export default function LikeOrBellButton({
   storageKey,
   cafeteriaID,
   enabledIcon,
@@ -48,5 +48,3 @@ function LikeOrBellButton({
     );
   }
 }
-
-export default LikeOrBellButton;

@@ -1,7 +1,7 @@
 import { HeartIcon } from "@heroicons/react/20/solid";
 import LikeOrBellButton from "./LikeOrBellButon";
 
-function LikeButton({ cafeteriaID }) {
+export default function LikeButton({ cafeteriaID }) {
   return (
     <LikeOrBellButton
       storageKey="liked"
@@ -13,5 +13,3 @@ function LikeButton({ cafeteriaID }) {
     />
   );
 }
-
-export default LikeButton;

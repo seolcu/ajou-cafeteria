@@ -8,7 +8,7 @@ function getImageUrl(name) {
   return new URL(`../assets/${name}`, import.meta.url).href;
 }
 
-function App() {
+export default function App() {
   return (
     <main className="flex flex-col gap-4 p-4">
       <h1 className="text-xl font-bold">학생식당</h1>
@@ -79,5 +79,3 @@ function App() {
     </main>
   );
 }
-
-export default App;
