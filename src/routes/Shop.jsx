@@ -20,7 +20,7 @@ export default function Shop() {
         <Link to={"/cafeteria/" + cafeteriaInfo.id} className="w-4 h-4">
           <ArrowUturnLeftIcon />
         </Link>
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-xl font-bold">
           {cafeteriaInfo.name} - {shop.name}
         </h1>
       </header>
@@ -35,7 +35,7 @@ export default function Shop() {
 
       <hr className="border-2 rounded border-text" />
 
-      <h2 className="font-bold text-2xl">메뉴</h2>
+      <h2 className="font-bold text-lg">메뉴</h2>
 
       <div className="grid grid-cols-2 gap-4">
         {shop.menu.map((menu) => (

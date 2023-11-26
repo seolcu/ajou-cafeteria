@@ -13,11 +13,11 @@ export default function Settings() {
         <Link to="/" className="w-4 h-4">
           <ArrowUturnLeftIcon />
         </Link>
-        <h1 className="text-3xl font-bold">설정</h1>
+        <h1 className="text-xl font-bold">설정</h1>
       </header>
 
       <div className="bg-base p-4 flex flex-col gap-4 rounded">
-        <h2 className="text-2xl font-bold">알림</h2>
+        <h2 className="text-lg font-bold">알림</h2>
         <div className="flex flex-row gap-2 items-center">
           <SimpleCheckBox storageKey="notification" defaultState={true} />
           <p>관심 식당 혼잡도 증가 시 알림</p>
@@ -25,7 +25,7 @@ export default function Settings() {
       </div>
 
       <div className="bg-base p-4 flex flex-col gap-4 rounded">
-        <h2 className="text-2xl font-bold">언어</h2>
+        <h2 className="text-lg font-bold">언어</h2>
         <div className="flex flex-row gap-4">
           <SimpleButton
             enableCondition={language == "ko"}

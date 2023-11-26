@@ -9,7 +9,7 @@ function averagePrice(shop) {
 export default function Collection({ cafeteriaInfo }) {
   return (
     <>
-      <h2 className="font-bold text-2xl">식당 목록</h2>
+      <h2 className="font-bold text-lg">식당 목록</h2>
       <div className="grid grid-cols-2 gap-4">
         {cafeteriaInfo.shops.map((shop) => (
           <Link

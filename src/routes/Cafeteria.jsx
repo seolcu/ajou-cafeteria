@@ -29,7 +29,7 @@ export default function Cafeteria() {
           <Link to="/" className="w-4 h-4">
             <ArrowUturnLeftIcon />
           </Link>
-          <h1 className="text-3xl font-bold">{cafeteriaInfo.name}</h1>
+          <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
           <div className="grow" />
           <div className="flex flex-row gap-1">
             <LikeButton cafeteriaID={cafeteriaInfo.id} />
@@ -61,7 +61,7 @@ export default function Cafeteria() {
           <Restaurant cafeteriaInfo={cafeteriaInfo} />
         ) : (
           <>
-            <h2 className="font-bold text-2xl">error</h2>
+            <h2 className="font-bold text-lg">error</h2>
           </>
         )}
       </main>
