@@ -11,7 +11,7 @@ export default function App() {
     <main className="flex flex-col gap-4 p-4">
       <header className="flex flex-row gap-4 items-center">
         <HomeIcon className="w-4 h-4" />
-        <h1 className="text-xl font-bold">학생식당</h1>
+        <h1 className="text-3xl font-bold">학생식당</h1>
       </header>
       <div className="grid grid-cols-2 gap-4">
         {cafeteriaInfoList.map((cafeteriaInfo) => {
