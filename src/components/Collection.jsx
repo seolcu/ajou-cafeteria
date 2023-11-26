@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 
+function averagePrice(shop) {
+  return (
+    shop.menu.reduce((sum, menu) => sum + menu.price, 0) / shop.menu.length
+  );
+}
+
 export default function Collection({ cafeteriaInfo }) {
   return (
     <>
@@ -9,9 +15,24 @@ export default function Collection({ cafeteriaInfo }) {
           <Link
             key={shop.id}
             to={"/cafeteria/" + cafeteriaInfo.id + "/shops/" + shop.id}
-            className="bg-base p-4 rounded"
+            className="bg-base p-4 rounded text-center font-medium"
           >
-            <h3 className="font-medium text-center">{shop.name}</h3>
+            <h3>{shop.name}</h3>
+            <p
+              className={
+                averagePrice(shop) >= 8000
+                  ? "text-red"
+                  : averagePrice(shop) >= 5000
+                  ? "text-yellow"
+                  : averagePrice(shop) >= 3000
+                  ? "text-green"
+                  : averagePrice(shop) >= 0
+                  ? "text-blue"
+                  : "text-overlay0"
+              }
+            >
+              평균 {averagePrice(shop)}원
+            </p>
           </Link>
         ))}
       </div>
