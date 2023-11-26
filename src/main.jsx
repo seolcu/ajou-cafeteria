@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import Cafeteria from "./routes/Cafeteria.jsx";
 import Settings from "./routes/settings.jsx";
+import Shop from "./routes/Shop.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/cafeteria/:cafeteriaID",
     element: <Cafeteria />,
+  },
+  {
+    path: "/cafeteria/:cafeteriaID/shop/:shopID",
+    element: <Shop />,
   },
   {
     path: "/settings",

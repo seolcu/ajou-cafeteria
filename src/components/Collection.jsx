@@ -14,7 +14,7 @@ export default function Collection({ cafeteriaInfo }) {
         {cafeteriaInfo.shops.map((shop) => (
           <Link
             key={shop.id}
-            to={"/cafeteria/" + cafeteriaInfo.id + "/shops/" + shop.id}
+            to={"/cafeteria/" + cafeteriaInfo.id + "/shop/" + shop.id}
             className="bg-base p-4 rounded text-center font-medium"
           >
             <h3>{shop.name}</h3>

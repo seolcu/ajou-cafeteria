@@ -9,6 +9,7 @@ const cafeteriaInfoList = [
       {
         id: 0,
         name: "감탄떡볶이",
+        type: "shop",
         menu: [
           {
             id: 0,
@@ -21,6 +22,7 @@ const cafeteriaInfoList = [
       {
         id: 1,
         name: "옥미관",
+        type: "shop",
         menu: [
           {
             id: 0,
@@ -33,6 +35,7 @@ const cafeteriaInfoList = [
       {
         id: 2,
         name: "만권화밥",
+        type: "shop",
         menu: [
           {
             id: 0,
@@ -45,6 +48,7 @@ const cafeteriaInfoList = [
       {
         id: 3,
         name: "바겟버거",
+        type: "shop",
         menu: [
           {
             id: 0,
@@ -57,6 +61,7 @@ const cafeteriaInfoList = [
       {
         id: 4,
         name: "행복돈가스",
+        type: "shop",
         menu: [
           {
             id: 0,

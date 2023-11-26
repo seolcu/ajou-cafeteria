@@ -8,6 +8,8 @@ import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 import Restaurant from "../components/Restaurant";
 import Random from "../components/Random";
 import Collection from "../components/Collection";
+import AveragePriceIndicatorBox from "../components/AveragePriceIndicatorBox";
+import getAveragePrice from "../functions/getAveragePrice";
 
 export default function Cafeteria() {
   const params = useParams();
@@ -26,24 +28,7 @@ export default function Cafeteria() {
   const hours = intToTimeString(date.getHours());
   const minutes = intToTimeString(date.getMinutes() - (date.getMinutes() % 10));
 
-  let averagePrice = 0;
-  if (cafeteriaInfo.type == "collection") {
-    let sum = 0;
-    let count = 0;
-    cafeteriaInfo.shops.forEach((shop) => {
-      shop.menu.forEach((menu) => {
-        sum += menu.price;
-        count++;
-      });
-    });
-    averagePrice = Math.round(sum / count);
-  } else if (cafeteriaInfo.type == "random") {
-    averagePrice = cafeteriaInfo.price;
-  } else if (cafeteriaInfo.type == "restaurant") {
-    averagePrice =
-      cafeteriaInfo.menu.reduce((sum, menu) => sum + menu.price, 0) /
-      cafeteriaInfo.menu.length;
-  }
+  const averagePrice = getAveragePrice(cafeteriaInfo);
 
   if (!cafeteriaInfo) {
     return <ErrorPage />;
@@ -97,36 +82,10 @@ export default function Cafeteria() {
             <p className="text-xs">마지막 갱신 {hours + ":" + minutes}</p>
           </div>
 
-          <div
-            className={
-              "text-base text-center p-4 rounded font-medium " +
-              (averagePrice >= 8000
-                ? "bg-red"
-                : averagePrice >= 5000
-                ? "bg-yellow "
-                : averagePrice >= 3000
-                ? "bg-green"
-                : averagePrice >= 0
-                ? "bg-blue"
-                : "bg-overlay0")
-            }
-          >
-            <h2 className="font-medium">
-              {averagePrice >= 8000
-                ? "비쌈"
-                : averagePrice >= 5000
-                ? "보통"
-                : averagePrice >= 3000
-                ? "저렴"
-                : averagePrice >= 0
-                ? "매우 저렴"
-                : "정보 없음"}
-            </h2>
-            <p className="text-xs">
-              {cafeteriaInfo.type == "random" ? "" : "평균 "}
-              {averagePrice}원
-            </p>
-          </div>
+          <AveragePriceIndicatorBox
+            cafeteriaInfo={cafeteriaInfo}
+            averagePrice={averagePrice}
+          />
         </div>
 
         <hr className="border-2 rounded border-text" />
