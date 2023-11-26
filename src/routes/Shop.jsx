@@ -33,14 +33,24 @@ export default function Shop() {
         />
       </div>
 
-      <div className="flex flex-col gap-4">
+      <hr className="border-2 rounded border-text" />
+
+      <h2 className="font-bold text-lg">메뉴</h2>
+
+      <div className="grid grid-cols-2 gap-4">
         {shop.menu.map((menu) => (
           <div
             key={menu.id}
-            className="bg-base p-4 rounded text-center font-medium"
+            className="bg-base flex flex-col gap-1 p-4 rounded font-medium"
           >
-            <h3>{menu.name}</h3>
-            <p>{menu.price}원</p>
+            <h3 className="font-medium">{menu.name}</h3>
+            <h4 className="text-sm">영양 정보</h4>
+            <ul className="text-xs">
+              {menu.ingredients.map((ingredient) => (
+                <li key={Math.random()}>- {ingredient}</li>
+              ))}
+            </ul>
+            <p className="text-sm">{menu.price}원</p>
           </div>
         ))}
       </div>
