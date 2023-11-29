@@ -1,5 +1,4 @@
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
-import ajouLogo from "../assets/ajou.png";
 import { Link } from "react-router-dom";
 import getImageUrl from "../functions/getImageUrl";
 import LikeButton from "../components/LikeButton";
@@ -20,10 +19,6 @@ export default function App() {
               className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
               key={cafeteriaInfo.id}
             >
-              <div className="ml-auto flex flex-row gap-1">
-                <LikeButton cafeteriaID={cafeteriaInfo.id} />
-                <BellButton cafeteriaID={cafeteriaInfo.id} />
-              </div>
               <Link
                 to={`/cafeteria/${cafeteriaInfo.id}`}
                 className="w-full flex flex-col gap-4 justify-between items-center"
@@ -67,8 +62,6 @@ export default function App() {
           to="/settings"
           className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
         >
-          {/* place holder */}
-          <div className="h-6"></div>
           <Cog6ToothIcon className="h-20 w-20 border-2 rounded-full p-2 text-text border-text" />
           <h2 className="font-medium">설정</h2>
         </Link>
