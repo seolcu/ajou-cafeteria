@@ -6,7 +6,7 @@ export default function CustomCheckbox({
   disabledIcon,
   enabledStyle,
   disabledStyle,
-  checkboxStyle = "p-0.5 w-6 h-6 border-2 rounded-full ",
+  checkboxStyle = "p-0.5 w-8 h-8 border-2 rounded-full ",
 }) {
   if (state) {
     return (
