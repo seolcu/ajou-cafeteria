@@ -1,8 +1,6 @@
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import { Link } from "react-router-dom";
 import getImageUrl from "../functions/getImageUrl";
-import LikeButton from "../components/LikeButton";
-import BellButton from "../components/BellButton";
 import { Cog6ToothIcon, HomeIcon } from "@heroicons/react/20/solid";
 
 export default function App() {

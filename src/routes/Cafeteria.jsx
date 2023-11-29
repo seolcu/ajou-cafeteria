@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ErrorPage from "./ErrorPage";
 import getImageUrl from "../functions/getImageUrl";
-import LikeButton from "../components/LikeButton";
 import BellButton from "../components/BellButton";
 import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 import Restaurant from "../components/Restaurant";
@@ -31,10 +30,7 @@ export default function Cafeteria() {
           </Link>
           <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
           <div className="grow" />
-          <div className="flex flex-row gap-1">
-            <LikeButton cafeteriaID={cafeteriaInfo.id} />
-            <BellButton cafeteriaID={cafeteriaInfo.id} />
-          </div>
+          <BellButton cafeteriaID={cafeteriaInfo.id} />
         </header>
 
         <img
