@@ -5,7 +5,7 @@ export default function AveragePriceIndicatorBox({
   return (
     <div
       className={
-        "text-base text-center p-4 rounded font-medium " +
+        "text-base text-center p-4 rounded-lg font-medium " +
         (averagePrice >= 8000
           ? "bg-red"
           : averagePrice >= 5000

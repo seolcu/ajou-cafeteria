@@ -3,7 +3,7 @@ export default function CheapBreakfastBox({ leftQuantity, fullQuantity }) {
   return (
     <div
       className={
-        "text-center p-4 rounded text-base " +
+        "text-center p-4 rounded-lg text-base " +
         (leftPercentage > 2 / 3
           ? "bg-green"
           : leftPercentage > 1 / 3

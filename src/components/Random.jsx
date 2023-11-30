@@ -10,14 +10,17 @@ export default function Random({ cafeteriaInfo }) {
             leftQuantity={cafeteriaInfo.cheapBreakfastSold}
             fullQuantity={cafeteriaInfo.cheapBreakfastTotal}
           />
-          <hr className="border-2 rounded border-text" />
+          <hr className="border-2 rounded-lg border-text" />
         </>
       ) : (
         <></>
       )}
       <h2 className="font-bold text-lg">오늘의 메뉴</h2>
       {cafeteriaInfo.menuofToday.map((meal) => (
-        <div className="flex flex-row gap-4 bg-base p-4 rounded" key={meal.id}>
+        <div
+          className="flex flex-row gap-4 bg-base p-4 rounded-lg"
+          key={meal.id}
+        >
           <div className="basis-1/2 flex flex-col gap-1">
             <h3 className="font-medium">
               오늘의{" "}

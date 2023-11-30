@@ -5,7 +5,7 @@ export default function CrowdedIndicatorBox({ cafeteriaInfo }) {
   return (
     <div
       className={
-        "text-center p-4 rounded text-base " +
+        "text-center p-4 rounded-lg text-base " +
         (crowded == 0
           ? "bg-overlay0"
           : crowded == 1

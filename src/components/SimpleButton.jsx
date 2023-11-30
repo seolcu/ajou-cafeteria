@@ -1,5 +1,5 @@
 export default function SimpleButton({ children, enableCondition, onClick }) {
-  const buttonStyle = "p-2 rounded ";
+  const buttonStyle = "p-2 rounded-lg ";
 
   return (
     <button

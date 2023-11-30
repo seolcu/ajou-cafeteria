@@ -33,7 +33,7 @@ export default function Shop() {
         />
       </div>
 
-      <hr className="border-2 rounded border-text" />
+      <hr className="border-2 rounded-lg border-text" />
 
       <h2 className="font-bold text-lg">메뉴</h2>
 
@@ -41,7 +41,7 @@ export default function Shop() {
         {shop.menu.map((menu) => (
           <div
             key={menu.id}
-            className="bg-base flex flex-col gap-1 p-4 rounded font-medium"
+            className="bg-base flex flex-col gap-1 p-4 rounded-lg font-medium"
           >
             <h3 className="font-medium">{menu.name}</h3>
             <h4 className="text-sm">영양 정보</h4>

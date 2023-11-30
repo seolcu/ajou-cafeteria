@@ -17,7 +17,7 @@ export default function Settings() {
         <h1 className="text-xl font-bold">설정</h1>
       </header>
 
-      <div className="bg-base p-4 flex flex-col gap-4 rounded">
+      <div className="bg-base p-4 flex flex-col gap-4 rounded-lg">
         <h2 className="text-lg font-bold">알림</h2>
         <div className="flex flex-row gap-2 items-center">
           <SimpleCheckBox storageKey="notification" defaultState={true} />
@@ -25,7 +25,7 @@ export default function Settings() {
         </div>
       </div>
 
-      <div className="bg-base p-4 flex flex-col gap-4 rounded">
+      <div className="bg-base p-4 flex flex-col gap-4 rounded-lg">
         <h2 className="text-lg font-bold">언어</h2>
         <div className="flex flex-row gap-4">
           <SimpleButton
@@ -49,7 +49,7 @@ export default function Settings() {
         </div>
       </div>
 
-      <div className="bg-base p-4 flex flex-col gap-4 rounded">
+      <div className="bg-base p-4 flex flex-col gap-4 rounded-lg">
         <h2 className="text-lg font-bold">테마 (새로고침 시 적용)</h2>
         <div className="flex flex-row gap-4">
           <SimpleButton

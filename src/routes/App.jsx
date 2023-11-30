@@ -2,6 +2,8 @@ import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import { Link } from "react-router-dom";
 import getImageUrl from "../functions/getImageUrl";
 import { Cog6ToothIcon, HomeIcon } from "@heroicons/react/20/solid";
+import CrowdedIndicatorBadge from "../components/CrowdedIndicatorBadge";
+import getCrowded from "../functions/getCrowded";
 
 export default function App() {
   return (
@@ -14,7 +16,7 @@ export default function App() {
         {cafeteriaInfoList.map((cafeteriaInfo) => {
           return (
             <div
-              className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
+              className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded-lg"
               key={cafeteriaInfo.id}
             >
               <Link
@@ -26,39 +28,17 @@ export default function App() {
                   src={getImageUrl(cafeteriaInfo.pictureName)}
                   alt="사진"
                 />
-                <h2 className="font-medium">
-                  {cafeteriaInfo.name}:{" "}
-                  <span
-                    className={
-                      cafeteriaInfo.crowded == 0
-                        ? "text-overlay0"
-                        : cafeteriaInfo.crowded == 1
-                        ? "text-green"
-                        : cafeteriaInfo.crowded == 2
-                        ? "text-yellow"
-                        : cafeteriaInfo.crowded == 3
-                        ? "text-red"
-                        : "text-blue"
-                    }
-                  >
-                    {cafeteriaInfo.crowded == 0
-                      ? "휴무"
-                      : cafeteriaInfo.crowded == 1
-                      ? "여유"
-                      : cafeteriaInfo.crowded == 2
-                      ? "보통"
-                      : cafeteriaInfo.crowded == 3
-                      ? "혼잡"
-                      : "정보 없음"}
-                  </span>
-                </h2>
+                <div className="flex flex-row gap-1 items-center">
+                  <h2 className="font-medium">{cafeteriaInfo.name}</h2>
+                  <CrowdedIndicatorBadge crowded={getCrowded(cafeteriaInfo)} />
+                </div>
               </Link>
             </div>
           );
         })}
         <Link
           to="/settings"
-          className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded"
+          className="bg-base flex flex-col gap-4 justify-between items-center p-4 rounded-lg"
         >
           <Cog6ToothIcon className="h-20 w-20 border-2 rounded-full p-2 text-text border-text" />
           <h2 className="font-medium">설정</h2>

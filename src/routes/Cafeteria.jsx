@@ -10,6 +10,8 @@ import Collection from "../components/Collection";
 import AveragePriceIndicatorBox from "../components/AveragePriceIndicatorBox";
 import getAveragePrice from "../functions/getAveragePrice";
 import CrowdedIndicatorBox from "../components/CrowdedIndicatorBox";
+import CrowdedIndicatorBadge from "../components/CrowdedIndicatorBadge";
+import getCrowded from "../functions/getCrowded";
 
 export default function Cafeteria() {
   const params = useParams();
@@ -28,13 +30,16 @@ export default function Cafeteria() {
           <Link to="/" className="w-4 h-4">
             <ArrowUturnLeftIcon />
           </Link>
-          <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
+          <div className="flex flex-row gap-2 items-center">
+            <h1 className="text-xl font-bold">{cafeteriaInfo.name}</h1>
+            <CrowdedIndicatorBadge crowded={getCrowded(cafeteriaInfo)} />
+          </div>
           <div className="grow" />
           <BellButton cafeteriaID={cafeteriaInfo.id} />
         </header>
 
         <img
-          className="h-60 rounded object-cover border-2 border-text"
+          className="h-60 rounded-lg object-cover border-2 border-text"
           src={getImageUrl(cafeteriaInfo.pictureName)}
           alt="사진"
         />
@@ -47,7 +52,7 @@ export default function Cafeteria() {
           />
         </div>
 
-        <hr className="border-2 rounded border-text" />
+        <hr className="border-2 rounded-lg border-text" />
 
         {cafeteriaInfo.type == "collection" ? (
           <Collection cafeteriaInfo={cafeteriaInfo} />

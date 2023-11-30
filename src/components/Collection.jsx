@@ -15,7 +15,7 @@ export default function Collection({ cafeteriaInfo }) {
           <Link
             key={shop.id}
             to={"/cafeteria/" + cafeteriaInfo.id + "/shop/" + shop.id}
-            className="bg-base p-4 rounded text-center font-medium"
+            className="bg-base p-4 rounded-lg text-center font-medium"
           >
             <h3>{shop.name}</h3>
             <p
