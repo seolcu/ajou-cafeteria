@@ -7,7 +7,6 @@ import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 export default function Settings() {
   const [language, setLanguage] = useLocalStorage("language", "ko");
   const [theme, setTheme] = useLocalStorage("theme", "system");
-  const [darkFlavor, setDarkFlavor] = useLocalStorage("darkFlavor", "frappe");
 
   return (
     <main className="p-4 flex flex-col gap-4">
@@ -40,6 +39,12 @@ export default function Settings() {
             onClick={() => setLanguage("en")}
           >
             English
+          </SimpleButton>
+          <SimpleButton
+            enableCondition={language == "cn"}
+            onClick={() => setLanguage("cn")}
+          >
+            中文
           </SimpleButton>
         </div>
       </div>

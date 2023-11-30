@@ -80,6 +80,9 @@ const cafeteriaInfoList = [
     crowded: 3,
     type: "random",
     price: 5500,
+    cheapBreakfast: true,
+    cheapBreakfastLeft: 50,
+    cheapBreakfastTotal: 200,
     menuofToday: [
       {
         id: 0,
@@ -119,6 +122,7 @@ const cafeteriaInfoList = [
     crowded: 2,
     type: "random",
     price: 6000,
+    cheapBreakfast: false,
     menuofToday: [
       {
         id: 0,

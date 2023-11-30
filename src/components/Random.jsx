@@ -1,7 +1,17 @@
+import CheapBreakfastBox from "./CheapBreakfastBox";
+
 export default function Random({ cafeteriaInfo }) {
   return (
     <>
       <h2 className="font-bold text-lg">오늘의 메뉴</h2>
+      {cafeteriaInfo.cheapBreakfast ? (
+        <CheapBreakfastBox
+          leftQuantity={cafeteriaInfo.cheapBreakfastLeft}
+          fullQuantity={cafeteriaInfo.cheapBreakfastTotal}
+        />
+      ) : (
+        <></>
+      )}
       {cafeteriaInfo.menuofToday.map((meal) => (
         <div className="flex flex-row gap-4 bg-base p-4 rounded" key={meal.id}>
           <div className="basis-1/2 flex flex-col gap-1">
