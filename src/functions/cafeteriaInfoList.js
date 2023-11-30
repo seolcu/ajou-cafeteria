@@ -85,7 +85,7 @@ const cafeteriaInfoList = [
     type: "random",
     price: 5500,
     cheapBreakfast: true,
-    cheapBreakfastSold: 50,
+    cheapBreakfastSold: 90,
     cheapBreakfastTotal: 200,
     menuofToday: [
       {

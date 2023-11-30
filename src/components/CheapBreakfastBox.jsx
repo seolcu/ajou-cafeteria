@@ -3,14 +3,14 @@ export default function CheapBreakfastBox({ leftQuantity, fullQuantity }) {
   return (
     <div
       className={
-        "text-center p-4 rounded bg-surface1" + ""
-        /*         (leftPercentage > 2 / 3
+        "text-center p-4 rounded text-base " +
+        (leftPercentage > 2 / 3
           ? "bg-green"
           : leftPercentage > 1 / 3
           ? "bg-yellow"
           : leftPercentage > 0
           ? "bg-red"
-          : "bg-overlay0" */
+          : "bg-overlay0")
       }
     >
       <h2 className="font-bold">{leftQuantity}개 남음</h2>
