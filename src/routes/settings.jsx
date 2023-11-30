@@ -11,7 +11,7 @@ export default function Settings() {
   return (
     <main className="p-4 flex flex-col gap-4">
       <header className="flex flex-row gap-4 items-center">
-        <Link to="/" className="w-4 h-4">
+        <Link to="/" className="w-6 h-6">
           <ArrowUturnLeftIcon />
         </Link>
         <h1 className="text-xl font-bold">설정</h1>

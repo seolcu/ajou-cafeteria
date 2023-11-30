@@ -27,7 +27,7 @@ export default function Cafeteria() {
     return (
       <main className="p-4 flex flex-col gap-4">
         <header className="flex flex-row gap-4 items-center">
-          <Link to="/" className="w-4 h-4">
+          <Link to="/" className="w-6 h-6">
             <ArrowUturnLeftIcon />
           </Link>
           <div className="flex flex-row gap-2 items-center">
