@@ -1,15 +1,7 @@
-export default function CrowdedIndicatorBox({ crowded }) {
-  const date = new Date();
-  const intToTimeString = (time) => {
-    if (time < 10) {
-      return "0" + time;
-    } else {
-      return time;
-    }
-  };
-  const hours = intToTimeString(date.getHours());
-  const minutes = intToTimeString(date.getMinutes() - (date.getMinutes() % 10));
+import getCrowded from "../functions/getCrowded";
 
+export default function CrowdedIndicatorBox({ cafeteriaInfo }) {
+  const crowded = getCrowded(cafeteriaInfo);
   return (
     <div
       className={
@@ -28,15 +20,11 @@ export default function CrowdedIndicatorBox({ crowded }) {
       <h2 className="font-medium">
         {crowded == 0
           ? "휴무"
-          : crowded == 1
-          ? "여유 "
-          : crowded == 2
-          ? "보통"
-          : crowded == 3
-          ? "혼잡"
-          : "정보 없음"}
+          : cafeteriaInfo.totalSeats - cafeteriaInfo.occupiedSeats + "석 남음"}
       </h2>
-      <p className="text-xs">마지막 갱신 {hours + ":" + minutes}</p>
+      <p className="text-xs">
+        전체 {cafeteriaInfo.totalSeats}석 {crowded == 0 ? "" : "중"}
+      </p>
     </div>
   );
 }

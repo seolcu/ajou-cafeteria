@@ -6,7 +6,7 @@ export default function Random({ cafeteriaInfo }) {
       <h2 className="font-bold text-lg">오늘의 메뉴</h2>
       {cafeteriaInfo.cheapBreakfast ? (
         <CheapBreakfastBox
-          leftQuantity={cafeteriaInfo.cheapBreakfastLeft}
+          leftQuantity={cafeteriaInfo.cheapBreakfastSold}
           fullQuantity={cafeteriaInfo.cheapBreakfastTotal}
         />
       ) : (

@@ -40,7 +40,7 @@ export default function Cafeteria() {
         />
 
         <div className="grid grid-cols-2 gap-4">
-          <CrowdedIndicatorBox crowded={cafeteriaInfo.crowded} />
+          <CrowdedIndicatorBox cafeteriaInfo={cafeteriaInfo} />
           <AveragePriceIndicatorBox
             cafeteriaInfo={cafeteriaInfo}
             averagePrice={averagePrice}

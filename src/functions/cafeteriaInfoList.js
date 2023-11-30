@@ -3,7 +3,9 @@ const cafeteriaInfoList = [
     id: 0,
     name: "아슐랭",
     pictureName: "아슐랭.jpg",
-    crowded: 3,
+    available: true,
+    occupiedSeats: 80,
+    totalSeats: 150,
     type: "collection",
     shops: [
       {
@@ -77,11 +79,13 @@ const cafeteriaInfoList = [
     id: 1,
     name: "기숙사식당",
     pictureName: "기숙사식당.jpg",
-    crowded: 3,
+    available: true,
+    occupiedSeats: 70,
+    totalSeats: 100,
     type: "random",
     price: 5500,
     cheapBreakfast: true,
-    cheapBreakfastLeft: 50,
+    cheapBreakfastSold: 50,
     cheapBreakfastTotal: 200,
     menuofToday: [
       {
@@ -119,7 +123,9 @@ const cafeteriaInfoList = [
     id: 2,
     name: "교직원식당",
     pictureName: "교직원식당.jpg",
-    crowded: 2,
+    available: true,
+    occupiedSeats: 50,
+    totalSeats: 130,
     type: "random",
     price: 6000,
     cheapBreakfast: false,
@@ -149,7 +155,9 @@ const cafeteriaInfoList = [
     id: 3,
     name: "다산관매점",
     pictureName: "ajou.png",
-    crowded: 1,
+    available: true,
+    occupiedSeats: 40,
+    totalSeats: 70,
     type: "restaurant",
     menu: [
       {
@@ -170,7 +178,9 @@ const cafeteriaInfoList = [
     id: 4,
     name: "팔달관매점",
     pictureName: "팔달관매점.jpg",
-    crowded: 2,
+    available: true,
+    occupiedSeats: 40,
+    totalSeats: 70,
     type: "restaurant",
     menu: [
       {
@@ -191,7 +201,9 @@ const cafeteriaInfoList = [
     id: 5,
     name: "연암관식당",
     pictureName: "연암관식당.png",
-    crowded: 0,
+    available: false,
+    occupiedSeats: 0,
+    totalSeats: 50,
     type: "restaurant",
     menu: [
       {
@@ -212,7 +224,9 @@ const cafeteriaInfoList = [
     id: 6,
     name: "송재관식당",
     pictureName: "ajou.png",
-    crowded: 1,
+    available: true,
+    occupiedSeats: 40,
+    totalSeats: 70,
     type: "restaurant",
     menu: [
       {
