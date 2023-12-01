@@ -12,6 +12,7 @@ import getAveragePrice from "../functions/getAveragePrice";
 import CrowdedIndicatorBox from "../components/CrowdedIndicatorBox";
 import CrowdedIndicatorBadge from "../components/CrowdedIndicatorBadge";
 import getCrowded from "../functions/getCrowded";
+import OperatingTimeIndicatorBox from "../components/OperatingTimeIndicatorBox";
 
 export default function Cafeteria() {
   const params = useParams();
@@ -44,11 +45,14 @@ export default function Cafeteria() {
           alt="사진"
         />
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <CrowdedIndicatorBox cafeteriaInfo={cafeteriaInfo} />
           <AveragePriceIndicatorBox
             cafeteriaInfo={cafeteriaInfo}
             averagePrice={averagePrice}
+          />
+          <OperatingTimeIndicatorBox
+            operatingTime={cafeteriaInfo.operatingTime}
           />
         </div>
 

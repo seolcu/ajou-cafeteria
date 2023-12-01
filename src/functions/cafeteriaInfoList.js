@@ -7,18 +7,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 80,
     totalSeats: 150,
     type: "collection",
-    operatingTime: [
-      {
-        open: {
-          hours: 10,
-          minutes: 30,
-        },
-        close: {
-          hours: 19,
-          minutes: 0,
-        },
-      },
-    ],
+    operatingTime: ["10:30~19:00"],
     shops: [
       {
         id: 0,
@@ -95,38 +84,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 70,
     totalSeats: 100,
     type: "random",
-    operatingTime: [
-      {
-        open: {
-          hours: 8,
-          minutes: 0,
-        },
-        close: {
-          hours: 10,
-          minutes: 0,
-        },
-      },
-      {
-        open: {
-          hours: 11,
-          minutes: 0,
-        },
-        close: {
-          hours: 14,
-          minutes: 0,
-        },
-      },
-      {
-        open: {
-          hours: 16,
-          minutes: 30,
-        },
-        close: {
-          hours: 18,
-          minutes: 30,
-        },
-      },
-    ],
+    operatingTime: ["08:00~10:00", "11:00~14:00", "16:30~18:30"],
     price: 5500,
     cheapBreakfast: true,
     cheapBreakfastSold: 90,
@@ -171,28 +129,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 50,
     totalSeats: 130,
     type: "random",
-    operatingTime: [
-      {
-        open: {
-          hours: 11,
-          minutes: 0,
-        },
-        close: {
-          hours: 14,
-          minutes: 0,
-        },
-      },
-      {
-        open: {
-          hours: 17,
-          minutes: 0,
-        },
-        close: {
-          hours: 19,
-          minutes: 0,
-        },
-      },
-    ],
+    operatingTime: ["11:00~14:00", "17:00~19:00"],
     price: 6000,
     cheapBreakfast: false,
     menuofToday: [
@@ -225,18 +162,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 40,
     totalSeats: 70,
     type: "restaurant",
-    operatingTime: [
-      {
-        open: {
-          hours: 11,
-          minutes: 0,
-        },
-        close: {
-          hours: 19,
-          minutes: 0,
-        },
-      },
-    ],
+    operatingTime: ["11:00~19:00"],
     menu: [
       {
         id: 0,
@@ -260,18 +186,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 40,
     totalSeats: 70,
     type: "restaurant",
-    operatingTime: [
-      {
-        open: {
-          hours: 11,
-          minutes: 0,
-        },
-        close: {
-          hours: 19,
-          minutes: 0,
-        },
-      },
-    ],
+    operatingTime: ["11:00~19:00"],
     menu: [
       {
         id: 0,
@@ -295,18 +210,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 0,
     totalSeats: 50,
     type: "restaurant",
-    operatingTime: [
-      {
-        open: {
-          hours: 11,
-          minutes: 0,
-        },
-        close: {
-          hours: 19,
-          minutes: 0,
-        },
-      },
-    ],
+    operatingTime: ["11:00~19:00"],
     menu: [
       {
         id: 0,
@@ -330,18 +234,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 40,
     totalSeats: 70,
     type: "restaurant",
-    operatingTime: [
-      {
-        open: {
-          hours: 11,
-          minutes: 0,
-        },
-        close: {
-          hours: 19,
-          minutes: 0,
-        },
-      },
-    ],
+    operatingTime: ["11:00~19:00"],
     menu: [
       {
         id: 0,
