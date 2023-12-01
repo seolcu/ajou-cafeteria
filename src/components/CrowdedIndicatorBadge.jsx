@@ -2,7 +2,7 @@ export default function CrowdedIndicatorBadge({ crowded }) {
   return (
     <div
       className={
-        "text-center rounded-lg text-base text-xs font-bold px-1.5 py-0.5 " +
+        "text-center rounded-lg text-base text-xs font-bold p-1 " +
         (crowded == 0
           ? "bg-overlay0"
           : crowded == 1
