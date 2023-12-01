@@ -210,7 +210,7 @@ const cafeteriaInfoList = [
     occupiedSeats: 0,
     totalSeats: 50,
     type: "restaurant",
-    operatingTime: ["11:00~19:00"],
+    operatingTime: ["15:00~21:00"],
     menu: [
       {
         id: 0,
@@ -231,7 +231,7 @@ const cafeteriaInfoList = [
     name: "송재관식당",
     pictureName: "ajou.png",
     available: true,
-    occupiedSeats: 40,
+    occupiedSeats: 10,
     totalSeats: 70,
     type: "restaurant",
     operatingTime: ["11:00~19:00"],
