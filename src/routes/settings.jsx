@@ -9,11 +9,11 @@ export default function Settings() {
   const [language, setLanguage] = useLocalStorage("language", "ko");
   const [theme, setTheme] = useLocalStorage("theme", "system");
 
-  const [allergyKeywords, setAllergyKeywords] = useLocalStorage(
-    "allergyKeywords",
+  const [warningKeywords, setWarningKeywords] = useLocalStorage(
+    "warningKeywords",
     []
   );
-  const [allergyKeywordInput, setAllergyKeywordInput] = useState("");
+  const [warningKeywordInput, setWarningKeywordInput] = useState("");
   return (
     <main className="p-4 flex flex-col gap-4">
       <header className="flex flex-row gap-4 items-center">
@@ -80,37 +80,41 @@ export default function Settings() {
       </div>
 
       <div className="bg-base p-4 flex flex-col gap-4 rounded-lg">
-        <h2 className="text-lg font-bold">알레르기 키워드</h2>
+        <h2 className="text-lg font-bold">경고 키워드</h2>
+        <p className="text-sm">
+          경고 키워드가 들어간 음식은 메뉴에서{" "}
+          <span className="text-red">붉은색</span>으로 표시됩니다
+        </p>
         <div className="flex flex-row gap-4 items-center">
           <input
             type="text"
-            placeholder="알레르기 키워드를 입력하세요."
+            placeholder="경고 키워드를 입력하세요."
             className="border-2 rounded-lg bg-surface0 border-text p-2 grow"
-            value={allergyKeywordInput}
-            onChange={(e) => setAllergyKeywordInput(e.target.value)}
+            value={warningKeywordInput}
+            onChange={(e) => setWarningKeywordInput(e.target.value)}
           />
           <SimpleButton
-            enableCondition={allergyKeywordInput != ""}
+            enableCondition={warningKeywordInput != ""}
             onClick={() => {
-              setAllergyKeywords([...allergyKeywords, allergyKeywordInput]);
-              setAllergyKeywordInput("");
+              setWarningKeywords([...warningKeywords, warningKeywordInput]);
+              setWarningKeywordInput("");
             }}
           >
             추가
           </SimpleButton>
         </div>
         <ul className="flex flex-col gap-2">
-          {allergyKeywords.map((allergyKeyword) => (
+          {warningKeywords.map((warningKeyword) => (
             <li
               className="rounded-lg p-2 bg-surface0 flex flex-row"
               key={Math.random()}
             >
-              <div className="grow truncate">{allergyKeyword}</div>
+              <div className="grow truncate">{warningKeyword}</div>
               <TrashIcon
                 className="w-6 h-6 shrink-0"
                 onClick={() =>
-                  setAllergyKeywords(
-                    allergyKeywords.filter((k) => k != allergyKeyword)
+                  setWarningKeywords(
+                    warningKeywords.filter((k) => k != warningKeyword)
                   )
                 }
               />
