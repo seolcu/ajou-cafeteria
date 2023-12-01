@@ -111,7 +111,7 @@ export default function Settings() {
             >
               <div className="grow truncate">{warningKeyword}</div>
               <TrashIcon
-                className="w-6 h-6 shrink-0"
+                className="w-6 h-6 shrink-0 text-red"
                 onClick={() =>
                   setWarningKeywords(
                     warningKeywords.filter((k) => k != warningKeyword)
