@@ -13,6 +13,7 @@ const cafeteriaInfoList = [
       {
         id: 0,
         name: "감탄떡볶이",
+        desc: "분식/떡볶이",
         type: "shop",
         menu: [
           {
@@ -26,6 +27,7 @@ const cafeteriaInfoList = [
       {
         id: 1,
         name: "옥미관",
+        desc: "한식/찌개",
         type: "shop",
         menu: [
           {
@@ -39,6 +41,7 @@ const cafeteriaInfoList = [
       {
         id: 2,
         name: "만권화밥",
+        desc: "한식/덮밥",
         type: "shop",
         menu: [
           {
@@ -52,6 +55,7 @@ const cafeteriaInfoList = [
       {
         id: 3,
         name: "바겟버거",
+        desc: "양식/버거",
         type: "shop",
         menu: [
           {
@@ -66,6 +70,7 @@ const cafeteriaInfoList = [
         id: 4,
         name: "행복돈가스",
         type: "shop",
+        desc: "일식/돈가스",
         menu: [
           {
             id: 0,
