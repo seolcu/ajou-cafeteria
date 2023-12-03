@@ -4,10 +4,11 @@ import SimpleButton from "../components/SimpleButton";
 import useLocalStorage from "../functions/useLocalStorage";
 import { ArrowUturnLeftIcon, TrashIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
+import useTheme from "../functions/useTheme";
 
 export default function Settings() {
+  const [theme, setTheme] = useTheme();
   const [language, setLanguage] = useLocalStorage("language", "ko");
-  const [theme, setTheme] = useLocalStorage("theme", "system");
 
   const [warningKeywords, setWarningKeywords] = useLocalStorage(
     "warningKeywords",
@@ -56,7 +57,7 @@ export default function Settings() {
       </div>
 
       <div className="bg-base p-4 flex flex-col gap-4 rounded-lg">
-        <h2 className="text-lg font-bold">테마 (새로고침 시 적용)</h2>
+        <h2 className="text-lg font-bold">테마</h2>
         <div className="flex flex-row gap-4">
           <SimpleButton
             enableCondition={theme == "system"}
