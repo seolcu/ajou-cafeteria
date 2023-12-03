@@ -165,7 +165,7 @@ const cafeteriaInfoList = [
   {
     id: 3,
     name: "다산관매점",
-    pictureName: "ajou.png",
+    pictureName: "다산관매점.png",
     mapPictureName: "다산관매점_지도.jpg",
     available: true,
     occupiedSeats: 40,
@@ -240,7 +240,7 @@ const cafeteriaInfoList = [
   {
     id: 6,
     name: "송재관식당",
-    pictureName: "ajou.png",
+    pictureName: "송재관식당.png",
     mapPictureName: "송재관식당_지도.jpg",
     available: true,
     occupiedSeats: 10,
