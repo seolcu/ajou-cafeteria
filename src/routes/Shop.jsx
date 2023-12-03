@@ -4,6 +4,7 @@ import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 import getAveragePrice from "../functions/getAveragePrice";
 import AveragePriceIndicatorBox from "../components/AveragePriceIndicatorBox";
 import CrowdedIndicatorBox from "../components/CrowdedIndicatorBox";
+import OperatingTimeIndicatorBox from "../components/OperatingTimeIndicatorBox";
 
 export default function Shop() {
   const params = useParams();
@@ -25,11 +26,14 @@ export default function Shop() {
         </h1>
       </header>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         <CrowdedIndicatorBox cafeteriaInfo={cafeteriaInfo} />
         <AveragePriceIndicatorBox
           cafeteriaInfo={shop}
           averagePrice={averagePrice}
+        />
+        <OperatingTimeIndicatorBox
+          operatingTime={cafeteriaInfo.operatingTime}
         />
       </div>
 
