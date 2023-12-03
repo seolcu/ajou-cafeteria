@@ -6,7 +6,7 @@ export default function Restaurant({ cafeteriaInfo }) {
         {cafeteriaInfo.menu.map((menu) => (
           <div
             key={menu.id}
-            className="bg-base p-4 rounded-lg text-center flex flex-col gap-2"
+            className="bg-base p-4 rounded-lg text-center flex flex-col"
           >
             <h3 className="font-medium">{menu.name}</h3>
             <p className="text-xs">{menu.ingredients.toString()}</p>

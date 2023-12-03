@@ -41,7 +41,7 @@ export default function Shop() {
         {shop.menu.map((menu) => (
           <div
             key={menu.id}
-            className="bg-base flex flex-col gap-1 p-4 rounded-lg text-center"
+            className="bg-base flex flex-col p-4 rounded-lg text-center"
           >
             <p className="font-medium">{menu.name}</p>
             <p className="text-xs">{menu.ingredients.toString()}</p>
