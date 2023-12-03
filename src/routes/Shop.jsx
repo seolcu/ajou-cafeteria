@@ -4,7 +4,6 @@ import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 import getAveragePrice from "../functions/getAveragePrice";
 import AveragePriceIndicatorBox from "../components/AveragePriceIndicatorBox";
 import CrowdedIndicatorBox from "../components/CrowdedIndicatorBox";
-import getCrowded from "../functions/getCrowded";
 
 export default function Shop() {
   const params = useParams();
@@ -42,16 +41,11 @@ export default function Shop() {
         {shop.menu.map((menu) => (
           <div
             key={menu.id}
-            className="bg-base flex flex-col gap-1 p-4 rounded-lg font-medium"
+            className="bg-base flex flex-col gap-1 p-4 rounded-lg text-center"
           >
-            <h3 className="font-medium">{menu.name}</h3>
-            <h4 className="text-sm">영양 정보</h4>
-            <ul className="text-xs">
-              {menu.ingredients.map((ingredient) => (
-                <li key={Math.random()}>- {ingredient}</li>
-              ))}
-            </ul>
-            <p className="text-sm">{menu.price}원</p>
+            <p className="font-medium">{menu.name}</p>
+            <p className="text-xs">{menu.ingredients.toString()}</p>
+            <p className="text-xs">{menu.price}원</p>
           </div>
         ))}
       </div>
