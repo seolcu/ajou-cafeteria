@@ -41,7 +41,7 @@ export default function Cafeteria() {
 
         <img
           className="h-60 rounded-lg object-cover border-2 border-text"
-          src={getImageUrl(cafeteriaInfo.pictureName)}
+          src={getImageUrl(cafeteriaInfo.mapPictureName)}
           alt="사진"
         />
 

@@ -20,9 +20,7 @@ export default function CrowdedIndicatorBox({ cafeteriaInfo }) {
       <h2 className="font-medium">
         {crowded == 0
           ? "휴무"
-          : `약 ${
-              cafeteriaInfo.totalSeats - cafeteriaInfo.occupiedSeats
-            }석 남음`}
+          : `${cafeteriaInfo.totalSeats - cafeteriaInfo.occupiedSeats}석 남음`}
       </h2>
       <p className="text-xs">
         전체 {cafeteriaInfo.totalSeats}석 {crowded == 0 ? "" : "중"}
