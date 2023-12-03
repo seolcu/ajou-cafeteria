@@ -97,7 +97,11 @@ export default function Settings() {
           <SimpleButton
             enableCondition={warningKeywordInput != ""}
             onClick={() => {
-              setWarningKeywords([...warningKeywords, warningKeywordInput]);
+              if (
+                warningKeywordInput != "" &&
+                !warningKeywords.includes(warningKeywordInput)
+              )
+                setWarningKeywords([...warningKeywords, warningKeywordInput]);
               setWarningKeywordInput("");
             }}
           >
