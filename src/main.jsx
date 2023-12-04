@@ -3,13 +3,17 @@ import ReactDOM from "react-dom/client";
 import App from "./routes/App.jsx";
 import "./index.css";
 import RootLayout from "./components/RootLayout.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import Cafeteria, { loader as cafeteriaLoader } from "./routes/Cafeteria.jsx";
 import Settings from "./routes/settings.jsx";
 import Shop, { loader as shopLoader } from "./routes/Shop.jsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
