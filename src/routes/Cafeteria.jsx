@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import ErrorPage from "./ErrorPage";
 import getImageUrl from "../functions/getImageUrl";
@@ -14,12 +14,14 @@ import CrowdedIndicatorBadge from "../components/CrowdedIndicatorBadge";
 import getCrowded from "../functions/getCrowded";
 import OperatingTimeIndicatorBox from "../components/OperatingTimeIndicatorBox";
 
-export default function Cafeteria() {
-  const params = useParams();
-  const cafeteriaInfo = cafeteriaInfoList.find(
-    (singleCafeteriaInfo) => singleCafeteriaInfo.id == params.cafeteriaID
+export function loader({ params }) {
+  return cafeteriaInfoList.find(
+    (cafeteriaInfo) => cafeteriaInfo.id == params.cafeteriaID
   );
+}
 
+export default function Cafeteria() {
+  const cafeteriaInfo = useLoaderData();
   const averagePrice = getAveragePrice(cafeteriaInfo);
 
   if (!cafeteriaInfo) {

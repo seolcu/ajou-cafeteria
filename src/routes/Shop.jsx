@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import cafeteriaInfoList from "../functions/cafeteriaInfoList";
 import { ArrowUturnLeftIcon } from "@heroicons/react/20/solid";
 import getAveragePrice from "../functions/getAveragePrice";
@@ -6,14 +6,18 @@ import AveragePriceIndicatorBox from "../components/AveragePriceIndicatorBox";
 import CrowdedIndicatorBox from "../components/CrowdedIndicatorBox";
 import OperatingTimeIndicatorBox from "../components/OperatingTimeIndicatorBox";
 
-export default function Shop() {
-  const params = useParams();
+export function loader({ params }) {
   const cafeteriaInfo = cafeteriaInfoList.find(
     (singleCafeteriaInfo) => singleCafeteriaInfo.id == params.cafeteriaID
   );
   const shop = cafeteriaInfo.shops.find(
     (singleShop) => singleShop.id == params.shopID
   );
+  return { cafeteriaInfo, shop };
+}
+
+export default function Shop() {
+  const { cafeteriaInfo, shop } = useLoaderData();
   const averagePrice = getAveragePrice(shop);
   return (
     <main className="p-4 flex flex-col gap-4">
