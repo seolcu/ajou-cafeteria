@@ -1,8 +1,11 @@
-# React + Vite
+# 아주대학교 학생식당
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 아주대학교 학생식당에 관련된 정보를 알려주는 PWA
+- 혼잡도, 메뉴, 가격, 식당 위치, 운영시간 등을 알 수 있음
+- 2023년 2학기 인공지능입문 팀 프로젝트
 
-Currently, two official plugins are available:
+## 개발환경
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React(Vite)
+- React Router
+- TailwindCSS(with Catppuccin theme)
